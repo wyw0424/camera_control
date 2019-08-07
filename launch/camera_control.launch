@@ -1,0 +1,14 @@
+<launch>
+
+  <!--param name="use_sim_time" value="true" /-->
+  <arg name="dataset" /> 
+
+  <node pkg="camera_control" name="camera_control_node" type="camera_control_node" output="screen">
+    <param name="fix_frame" value="/map" />
+    <param name="base_link" value="/base_link" />
+    <param name="pic_distance_threshold" value="2.0" />
+    <param name="data_file" value="/home/ydh/pic.txt" />
+    <param name="init_sh" value="/home/ydh/ThetaV/bin/initialize_ptp.sh" />
+    <param name="capture_sh" value="/home/ydh/ThetaV/bin/capture_one.sh" />
+  </node>
+</launch>
